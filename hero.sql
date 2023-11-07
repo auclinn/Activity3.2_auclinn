@@ -172,3 +172,10 @@ FROM player AS p
 INNER JOIN hero AS h
 ON p.hero_id = h.hero_id
 WHERE is_active = true;
+
+--6.	Create new branch named "feat/select-heroes-archers"
+SELECT h.hero_name
+FROM class AS c
+INNER JOIN hero AS h
+ON c.class_id = h.class_id
+WHERE c.class_name LIKE '%Archers%';
