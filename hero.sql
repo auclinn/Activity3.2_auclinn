@@ -165,3 +165,10 @@ WHERE hero_id = 1;
 
 --deleting:
 DELETE FROM heroitem WHERE hero_id = 1;
+
+--5.	Create new branch named "feat/select-active-players"
+SELECT p.player_name, h.hero_name
+FROM player AS p
+INNER JOIN hero AS h
+ON p.hero_id = h.hero_id
+WHERE is_active = true;
